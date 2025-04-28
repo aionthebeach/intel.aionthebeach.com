@@ -8,6 +8,11 @@
     <!-- Preload CSS -->
     <link rel="preload" href="style.css" as="style">
     
+    <!-- Preload critical images -->
+    <link rel="preload" href="img/headshots/gen_mitchell.avif" as="image" type="image/avif">
+    <link rel="preload" href="img/headshots/dr_chen.avif" as="image" type="image/avif">
+    <link rel="preload" href="img/headshots/sophia.avif" as="image" type="image/avif">
+    
     <!-- Critical CSS for above-the-fold content -->
     <style>
         /* Critical CSS for above-the-fold content */
@@ -90,7 +95,11 @@
              <h1>Our Experts</h1>
             <div class="headshot-tile">
                 <div class="tile-header">
-                    <img src="img/headshots/gen mitchell.png" alt="Gen. Sarah Mitchell">
+                    <picture>
+                        <source srcset="img/headshots/avif/gen_mitchell.avif" type="image/avif">
+                        <source srcset="img/headshots/webp/gen_mitchell.webp" type="image/webp">
+                        <img src="img/headshots/optimized_png/gen_mitchell_optimized.png" alt="Gen. Sarah Mitchell" width="300" height="300" loading="lazy">
+                    </picture>
                     <div class="tile-content">
                         <h3>Gen. Sarah Mitchell</h3>
                         <p>Military Intelligence</p>
@@ -104,7 +113,11 @@
             <!-- Tile 2 -->
             <div class="headshot-tile">
                 <div class="tile-header">
-                    <img src="img/headshots/dr_chen.png" alt="Dr. Michael Chen">
+                    <picture>
+                        <source srcset="img/headshots/avif/dr_chen.avif" type="image/avif">
+                        <source srcset="img/headshots/webp/dr_chen.webp" type="image/webp">
+                        <img src="img/headshots/optimized_png/dr_chen_optimized.png" alt="Dr. Michael Chen" width="300" height="300" loading="lazy">
+                    </picture>
                     <div class="tile-content">
                         <h3>Dr. Michael Chen</h3>
                         <p>Geopolitical Analyst</p>
@@ -118,7 +131,11 @@
             <!-- Tile 3 -->
             <div class="headshot-tile">
                 <div class="tile-header">
-                    <img src="img/headshots/sophia.png" alt="Sophia Rodriguez">
+                    <picture>
+                        <source srcset="img/headshots/avif/sophia.avif" type="image/avif">
+                        <source srcset="img/headshots/webp/sophia.webp" type="image/webp">
+                        <img src="img/headshots/optimized_png/sophia_optimized.png" alt="Sophia Rodriguez" width="300" height="300" loading="lazy">
+                    </picture>
                     <div class="tile-content">
                         <h3>Sophia Rodriguez</h3>
                         <p>Investigative Journalist</p>
