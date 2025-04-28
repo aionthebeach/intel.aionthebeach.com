@@ -1,0 +1,548 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif; /* More standard gov font */
+    line-height: 1.6;
+    color: #ccc; /* Lighter default text for dark theme */
+    background-color: #111; /* Dark background for whole page */
+}
+
+section {
+    padding: 1.5rem 2rem; /* Adjust padding */
+    margin: 0 auto; /* Remove vertical margin, handle spacing differently */
+    max-width: 800px;
+    background-color: transparent; /* Make sections transparent */
+    border-radius: 0; /* Remove rounded corners */
+    box-shadow: none; /* Remove shadow */
+    border: none; /* Remove default section border */
+    /* Add padding bottom for spacing between sections */
+    padding-bottom: 3rem;
+}
+
+#features h2, #signup h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #fff; /* White headings */
+    padding-top: 2rem; /* Add space above these headings */
+}
+
+#signup p {
+    text-align: center;
+    margin-bottom: 1rem; /* Added margin for spacing */
+    color: #ccc; /* Light text */
+}
+
+#features ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#features li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+    color: #ccc; /* Light text */
+}
+
+#features li strong {
+    color: #fff; /* Slightly brighter for emphasis */
+}
+
+#features li::before {
+    content: '\25BA'; /* Use a simple triangle bullet */
+    position: absolute;
+    left: 0;
+    color: #E31C5F; /* Use accent color for bullets */
+    font-weight: normal;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #E31C5F; /* Match prominent button */
+    color: #fff;
+    padding: 0.8rem 1.5rem; /* Keep slightly smaller maybe? */
+    text-decoration: none;
+    border-radius: 4px; /* Match prominent button */
+    font-weight: normal;
+    transition: all 0.3s ease;
+    border: none; /* Match prominent button */
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 0 0 rgba(227, 28, 95, 0.5);
+}
+
+.cta-button:hover {
+    background-color: #c81854; /* Match prominent button hover */
+    color: #fff;
+    box-shadow: 0 0 10px 0 rgba(227, 28, 95, 0.7);
+}
+
+.cta-button:active {
+    transform: scale(0.97);
+    box-shadow: 0 0 5px 0 rgba(227, 28, 95, 0.5);
+}
+
+.cta-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.7s ease;
+}
+
+.cta-button:hover::before {
+    left: 100%;
+}
+
+#signup form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#signup input[type="email"] {
+    padding: 0.8rem; /* Revert padding */
+    border: 1px solid #555; /* Darker border */
+    border-radius: 4px; /* Match button radius */
+    width: 200px; /* Set fixed width */
+    font-size: 1rem;
+    background-color: #333; /* Dark input background */
+    color: #fff; /* Light input text */
+}
+
+#signup input[type="email"]::placeholder {
+    color: #aaa; /* Lighter placeholder text */
+}
+
+#signup .cta-button {
+    width: 200px; /* Set fixed width */
+    text-align: center; /* Ensure text is centered if padding makes it look off */
+}
+
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1.5rem;
+    color: #aaa; /* Lighter gray footer text */
+    background-color: #222; /* Slightly different dark shade for footer */
+    border-top: 1px solid #444; /* Darker Top border */
+}
+
+footer a {
+    color: #E31C5F; /* Use accent color for link */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* --- New Hero Section Styles --- */
+#new-hero {
+    background-color: #111; /* Dark background from image */
+    color: #fff;
+    padding: 4rem 2rem 0 2rem; /* Adjust padding, remove bottom padding here */
+    text-align: left;
+    border: none; /* Remove section border */
+}
+
+#new-hero .hero-content {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align all content to the left */
+    max-width: 600px; /* Match the width of the text content */
+    margin: 0 auto; /* Center the entire content block */
+}
+
+#new-hero .hero-content h1,
+#new-hero .hero-content p {
+    text-align: left;
+    width: 100%; /* Take full width of parent */
+}
+
+#new-hero .hero-content h1 {
+    font-size: 3.5rem; /* Default large size */
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+#new-hero .hero-content p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0; /* Center paragraph text */
+    color: #ccc; /* Lighter text color */
+    text-align: justify; /* Justify text alignment */
+}
+
+.cta-button-prominent {
+    display: inline-block;
+    background-color: #E31C5F; /* Pink/Red from image */
+    color: #fff;
+    padding: 1rem 2.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border-radius: 4px;
+    margin-top: 1.5rem;
+    margin-bottom: 3rem; /* Space before grid */
+    transition: all 0.3s ease;
+    border: none;
+    align-self: center; /* Center button within its container */
+    width: 250px; /* Fixed width for the button */
+    text-align: center; /* Center text in button */
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 0 0 rgba(227, 28, 95, 0.5);
+}
+
+.cta-button-prominent:hover {
+    background-color: #c81854; /* Darker shade on hover */
+    box-shadow: 0 0 15px 0 rgba(227, 28, 95, 0.8);
+}
+
+.cta-button-prominent:active {
+    transform: scale(0.97);
+    box-shadow: 0 0 8px 0 rgba(227, 28, 95, 0.6);
+}
+
+.cta-button-prominent::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.7s ease;
+}
+
+.cta-button-prominent:hover::before {
+    left: 100%;
+}
+
+.headshot-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Change to 1 column for stacked layout */
+    gap: 0; /* Spacing between grid items */
+    max-width: 600px; /* Reduce max width for single column */
+    margin: 0 auto; /* Center the grid */
+    justify-content: center; /* Center grid items if they don't fill the row */
+}
+
+.headshot-grid img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Slightly rounded corners for images */
+    border: 1px solid #444; /* Subtle border */
+}
+
+/* --- Headshot Tile Accordion Styles --- */
+
+.headshot-tile {
+    background-color: #222;
+    border-radius: 8px;
+    overflow: hidden; /* Important for height transition */
+    margin-bottom: 1rem; /* Add space between tiles */
+    transition: background-color 0.3s ease; /* Smooth color change */
+}
+
+.headshot-tile:hover {
+    background-color: #333; /* Slightly lighter on hover */
+}
+
+.tile-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Reduced from 1rem to 0.5rem */
+    padding: 1rem;
+    cursor: pointer;
+    position: relative; /* For positioning the indicator */
+}
+
+.tile-header img {
+    width: 60px; /* Keep image size consistent */
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.tile-content {
+    display: flex; /* Use flex here too */
+    flex-direction: column; /* Stack h3 and p */
+    justify-content: center; /* Center h3/p vertically */
+    flex: 1; /* Take up available space */
+    min-width: 0; /* Allow text to truncate */
+}
+
+.tile-content h3 {
+    margin: 0 0 0.1rem 0; /* Reduced bottom margin */
+    font-size: 1.1rem;
+    color: #eee;
+    line-height: 1.2; /* Adjust line-height */
+}
+
+.tile-content p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #bbb;
+    line-height: 1.2; /* Adjust line-height */
+}
+
+.indicator {
+    font-size: 1.5rem;
+    color: #aaa;
+    transition: transform 0.3s ease;
+    margin-left: auto; /* Push indicator to the far right */
+    align-self: center; /* Vertically align indicator in the flex container */
+}
+
+.tile-details {
+    padding: 0 1rem 1rem 1rem; /* Add padding, but not at the top */
+    max-height: 0; /* Initially hidden */
+    overflow: hidden;
+    transition: max-height 0.5s ease-out; /* Only transition height */
+    color: #ccc;
+    border-top: 1px solid #333; /* Separator line */
+    margin-top: 0.5rem; /* Space below header */
+    opacity: 0; /* Hide content initially */
+    transition: max-height 0.5s ease-out, opacity 0.3s ease-out; /* Add opacity transition */
+}
+
+.tile-details h4 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.2rem;
+    color: #eee;
+    font-size: 1rem;
+}
+
+.tile-details p {
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Active state for expanded tile */
+
+.headshot-tile.active .indicator {
+    transform: rotate(180deg); /* Point arrow up */
+}
+
+.headshot-tile.active .tile-details {
+    opacity: 1; /* Show content when active */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .headshot-grid {
+        grid-template-columns: 1fr; /* 1 column for smaller tablets/large phones */
+    }
+}
+
+@media (max-width: 600px) {
+    #new-hero .hero-content h1 {
+        font-size: 2.2rem; /* Adjust for small screens */
+    }
+    .headshot-grid {
+        grid-template-columns: 1fr; /* 1 column for mobile */
+        gap: 0.5rem; /* Reduce gap for single column */
+    }
+    #signup form {
+        flex-direction: column;
+        align-items: center; /* Center items horizontally in column */
+    }
+}
+
+/* Add a pulsing animation for buttons */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(227, 28, 95, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 10px 5px rgba(227, 28, 95, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(227, 28, 95, 0);
+    }
+}
+
+.button-pulse {
+    animation: pulse 2s infinite;
+}
+
+/* Intelligence briefing scan effect */
+@keyframes scanning {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 0% 100%;
+    }
+}
+
+.scanning {
+    position: relative;
+    background-image: linear-gradient(to bottom, rgba(0, 255, 0, 0.1) 0%, transparent 50%, rgba(0, 255, 0, 0.1) 100%);
+    background-size: 100% 300%;
+    animation: scanning 1.5s ease-in-out;
+    overflow: hidden;
+}
+
+.scan-line {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 2px;
+    width: 100%;
+    background-color: rgba(0, 255, 0, 0.7);
+    box-shadow: 0 0 8px 2px rgba(0, 255, 0, 0.7);
+    animation: scan-line 1.5s ease-in-out;
+    z-index: 10;
+}
+
+@keyframes scan-line {
+    0% {
+        top: 0%;
+    }
+    100% {
+        top: 100%;
+    }
+}
+
+/* Add a subtle text glitch effect on hover */
+@keyframes glitch {
+    0% {
+        text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75), -0.025em -0.05em 0 rgba(0, 255, 0, 0.75), 0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+    }
+    14% {
+        text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75), -0.025em -0.05em 0 rgba(0, 255, 0, 0.75), 0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+    }
+    15% {
+        text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75), 0.025em 0.025em 0 rgba(0, 255, 0, 0.75), -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+    }
+    49% {
+        text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75), 0.025em 0.025em 0 rgba(0, 255, 0, 0.75), -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+    }
+    50% {
+        text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75), 0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75);
+    }
+    99% {
+        text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75), 0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75);
+    }
+    100% {
+        text-shadow: -0.025em 0 0 rgba(255, 0, 0, 0.75), -0.025em -0.025em 0 rgba(0, 255, 0, 0.75), -0.025em -0.05em 0 rgba(0, 0, 255, 0.75);
+    }
+}
+
+.cta-button:hover, .cta-button-prominent:hover {
+    animation: glitch 0.3s cubic-bezier(.25, .46, .45, .94) both;
+}
+
+#signup {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1.5rem;
+    position: relative;
+}
+
+#signup-form, #confirmation-message {
+    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+#signup-form.fade-out {
+    opacity: 0;
+    transform: translateY(-20px);
+    position: absolute;
+    width: 100%;
+    left: 0;
+}
+
+#confirmation-message {
+    opacity: 0;
+    transform: translateY(20px);
+    max-height: 0;
+    overflow: hidden;
+}
+
+#confirmation-message.show {
+    opacity: 1;
+    transform: translateY(0);
+    max-height: 500px; /* Large enough to contain all content */
+}
+
+.hidden {
+    display: none;
+}
+
+.confirmation-text {
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 1rem 0;
+}
+
+.confirmation-icon {
+    margin: 1.5rem auto;
+    animation: scale-in 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.small-text {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-top: 1rem;
+}
+
+@keyframes scale-in {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Intelligence briefing classified stamp effect */
+@keyframes stamp-in {
+    0% {
+        opacity: 0;
+        transform: rotate(-15deg) scale(2);
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(0) scale(1);
+    }
+}
+
+.confirmation-text {
+    position: relative;
+}
+
+/* .confirmation-text::after {
+    content: "CLASSIFIED";
+    position: absolute;
+    top: -15px;
+    right: 50%;
+    transform: translateX(50%) rotate(-15deg);
+    font-size: 0.8rem;
+    color: #E31C5F;
+    border: 2px solid #E31C5F;
+    padding: 2px 8px;
+    border-radius: 4px;
+    opacity: 0;
+    animation: stamp-in 1s ease-out 0.5s forwards;
+} */
