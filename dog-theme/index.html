@@ -3,7 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tycoon Brief provides actionable intelligence insights from military, geopolitical, and investigative experts. Get daily briefings on global affairs and exclusive analysis.">
     <title>Tycoon's Intel Brief</title>
+    
+    <!-- Preload critical images -->
+    <link rel="preload" href="../img/headshots/avif/gen_mitchell.avif" as="image" type="image/avif">
+    <link rel="preload" href="../img/headshots/avif/dr_chen.avif" as="image" type="image/avif">
+    <link rel="preload" href="../img/headshots/avif/sophia.avif" as="image" type="image/avif">
     <style>
         * {
             margin: 0;
@@ -67,6 +73,13 @@
             height: 60px;
             border-radius: 5px;
             margin-right: 20px;
+            object-fit: cover;
+            display: block;
+        }
+        .expert-image img {
+            width: 60px;
+            height: 60px;
+            border-radius: 5px;
             object-fit: cover;
         }
         .expert-info {
@@ -225,7 +238,11 @@
             <h2>Our Experts</h2>
             
             <div class="expert-card">
-                <img src="../img/headshots/original/gen mitchell.png" alt="Gen. Sarah Mitchell" class="expert-image">
+                <picture class="expert-image">
+                    <source srcset="../img/headshots/avif/gen_mitchell.avif" type="image/avif">
+                    <source srcset="../img/headshots/webp/gen_mitchell.webp" type="image/webp">
+                    <img src="../img/headshots/optimized_png/gen_mitchell_optimized.png" alt="Gen. Sarah Mitchell" width="60" height="60">
+                </picture>
                 <div class="expert-info">
                     <h3>Gen. Sarah Mitchell</h3>
                     <p>Military Intelligence</p>
@@ -234,7 +251,11 @@
             </div>
             
             <div class="expert-card">
-                <img src="../img/headshots/original/dr_chen.png" alt="Dr. Michael Chen" class="expert-image">
+                <picture class="expert-image">
+                    <source srcset="../img/headshots/avif/dr_chen.avif" type="image/avif">
+                    <source srcset="../img/headshots/webp/dr_chen.webp" type="image/webp">
+                    <img src="../img/headshots/optimized_png/dr_chen_optimized.png" alt="Dr. Michael Chen" width="60" height="60">
+                </picture>
                 <div class="expert-info">
                     <h3>Dr. Michael Chen</h3>
                     <p>Geopolitical Analyst</p>
@@ -243,7 +264,11 @@
             </div>
             
             <div class="expert-card">
-                <img src="../img/headshots/original/sophia.png" alt="Sophia Rodriguez" class="expert-image">
+                <picture class="expert-image">
+                    <source srcset="../img/headshots/avif/sophia.avif" type="image/avif">
+                    <source srcset="../img/headshots/webp/sophia.webp" type="image/webp">
+                    <img src="../img/headshots/optimized_png/sophia_optimized.png" alt="Sophia Rodriguez" width="60" height="60">
+                </picture>
                 <div class="expert-info">
                     <h3>Sophia Rodriguez</h3>
                     <p>Investigative Journalist</p>
