@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tycoon's Intel Brief</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            background-color: #ffefd5;
+            color: #333;
+            max-width: 1470px;
+            margin: 0 auto;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 40px 60px;
+        }
+        .left-section {
+            flex: 1;
+            padding-right: 40px;
+            min-width: 300px;
+        }
+        .right-section {
+            flex: 1;
+            padding-left: 40px;
+            min-width: 300px;
+        }
+        h1 {
+            font-size: 4rem;
+            color: #333;
+            margin-bottom: 30px;
+            line-height: 1.1;
+        }
+        h2 {
+            font-size: 2.5rem;
+            color: #333;
+        }
+        p {
+            font-size: 1.15rem;
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+        .expert-card {
+            background-color: #f5e2ba;
+            border-radius: 10px;
+            border: black 4px solid;
+            padding: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            position: relative;
+        }
+        .expert-card:hover {
+            background-color: #f0d79e;
+        }
+        .expert-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 5px;
+            margin-right: 20px;
+            object-fit: cover;
+        }
+        .expert-info {
+            flex: 1;
+        }
+        .expert-info h3 {
+            font-size: 1.4rem;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .expert-info p {
+            font-size: 1.1rem;
+            color: #555;
+            margin: 0;
+        }
+        .arrow {
+            color: #333;
+            font-size: 1.5rem;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+        .feature-list {
+            list-style: none;
+            margin: 20px 0 30px 0;
+        }
+        .feature-list li {
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 25px;
+            font-size: 1.15rem;
+        }
+        .feature-list li:before {
+            content: "▶";
+            color: #cc3333;
+            position: absolute;
+            left: 0;
+            top: 2px;
+            font-size: 0.8rem;
+        }
+        .email-form {
+            display: flex;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+        input[type="email"] {
+            flex: 1;
+            padding: 15px 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px 0 0 5px;
+            font-size: 1.1rem;
+            min-width: 200px;
+        }
+        .request-button {
+            background-color: #cc3333;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+        .request-button:hover {
+            background-color: #aa2222;
+        }
+        .dog-logo {
+            width: 500px;
+            max-width: 100%;
+        }
+        
+        .mobile-header {
+            display: none;
+        }
+        
+        .desktop-only {
+            display: block;
+        }
+        
+        /* Responsive styles */
+        @media (max-width: 1200px) {
+            .container {
+                padding: 30px 40px;
+            }
+            h1 {
+                font-size: 3.5rem;
+            }
+            h2 {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                padding: 20px;
+            }
+            .left-section, .right-section {
+                width: 100%;
+                padding: 0;
+                margin-bottom: 40px;
+            }
+            .left-section {
+                order: 1;
+            }
+            .right-section {
+                order: 2;
+            }
+            .mobile-header {
+                display: block;
+                order: 0;
+                width: 100%;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+            h1 {
+                font-size: 2.8rem;
+                margin-top: 20px;
+            }
+            h2 {
+                font-size: 1.8rem;
+                margin-top: 30px;
+            }
+            .dog-logo {
+                width: 200px;
+                margin: 0 auto 30px;
+                display: block;
+            }
+            
+            .desktop-only {
+                display: none;
+            }
+            .email-form {
+                flex-direction: column;
+            }
+            input[type="email"] {
+                border-radius: 5px;
+                margin-bottom: 10px;
+                width: 100%;
+            }
+            .request-button {
+                border-radius: 5px;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="mobile-header">
+            <img src="../img/dog-pill.png" alt="Business Dog Logo" class="dog-logo">
+        </div>
+        
+        <div class="left-section">
+            <img src="../img/dog-pill.png" alt="Business Dog Logo" class="dog-logo desktop-only">
+            <h2>Our Experts</h2>
+            
+            <div class="expert-card">
+                <img src="../img/headshots/original/gen mitchell.png" alt="Gen. Sarah Mitchell" class="expert-image">
+                <div class="expert-info">
+                    <h3>Gen. Sarah Mitchell</h3>
+                    <p>Military Intelligence</p>
+                </div>
+                <span class="arrow">▶</span>
+            </div>
+            
+            <div class="expert-card">
+                <img src="../img/headshots/original/dr_chen.png" alt="Dr. Michael Chen" class="expert-image">
+                <div class="expert-info">
+                    <h3>Dr. Michael Chen</h3>
+                    <p>Geopolitical Analyst</p>
+                </div>
+                <span class="arrow">▶</span>
+            </div>
+            
+            <div class="expert-card">
+                <img src="../img/headshots/original/sophia.png" alt="Sophia Rodriguez" class="expert-image">
+                <div class="expert-info">
+                    <h3>Sophia Rodriguez</h3>
+                    <p>Investigative Journalist</p>
+                </div>
+                <span class="arrow">▶</span>
+            </div>
+        </div>
+        
+        <div class="right-section">
+            <h1>Tycoon's Intel Brief</h1>
+            
+            <p>Actionable insights from our specifically trained AIs who share their wisdom and strategies for success. Access exclusive intel and learn from the experts charting the world. You can also interact directly with each content to ask questions and dig deeper.</p>
+            
+            <h2>What You Get Every Morning:</h2>
+            
+            <ul class="feature-list">
+                <li><strong>Leader Insights:</strong> Understand the perspectives and plans key global figures.</li>
+                <li><strong>State Politics:</strong> Track crucial internal political developments.</li>
+                <li><strong>Geopolitical Movements:</strong> Stay informed on international relations and shifts in power.</li>
+                <li><strong>Translated Regional News:</strong> Access vital information from local sources, translated for you.</li>
+                <li><strong>Forward-Looking Insights:</strong> Gain strategic foresight on what's likely to happen.</li>
+            </ul>
+            
+            <div class="email-form">
+                <input type="email" placeholder="Enter your email">
+                <button class="request-button">Request Access</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
