@@ -4,193 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Tycoon Brief provides actionable intelligence insights from military, geopolitical, and investigative experts. Get daily briefings on global affairs and exclusive analysis.">
-    <title>Tycoon Brief - Your Daily Global Intelligence</title>
+    <title>intel.aionthebeach.com | Behind the matrix</title>
     
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
     <link rel="manifest" href="/favicon/site.webmanifest">
-
-    <!-- Preload CSS -->
-    <link rel="preload" href="style.css?v=20250428" as="style">
     
     <!-- Preload critical images -->
     <link rel="preload" href="img/headshots/avif/gen_mitchell.avif" as="image" type="image/avif">
     <link rel="preload" href="img/headshots/avif/dr_chen.avif" as="image" type="image/avif">
     <link rel="preload" href="img/headshots/avif/sophia.avif" as="image" type="image/avif">
     
-    <!-- Critical CSS for above-the-fold content -->
-    <style>
-        /* Critical CSS for above-the-fold content */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.6;
-            color: #ccc;
-            background-color: #111;
-        }
-        #new-hero {
-            background-color: #111;
-            color: #fff;
-            padding: 4rem 2rem 0 2rem;
-            text-align: left;
-            border: none;
-        }
-        #new-hero .hero-content {
-            text-align: left;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        #new-hero .hero-content h1 {
-            font-size: 3.5rem;
-            font-weight: bold;
-            line-height: 1.2;
-            margin-bottom: 1.5rem;
-            text-align: left;
-            width: 100%;
-        }
-        #new-hero .hero-content p {
-            font-size: 1.1rem;
-            max-width: 600px;
-            margin: 0;
-            color: #ccc;
-            text-align: justify;
-            width: 100%;
-        }
-    </style>
-    
-    <!-- Non-blocking CSS loading -->
-    <link rel="stylesheet" href="style.css?v=20250428" media="print" onload="this.media='all'">
-    <!-- Fallback for browsers that don't support onload -->
-    <noscript><link rel="stylesheet" href="style.css?v=20250428"></noscript>
-    
-    <!-- Meta Pixel Code -->
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '112119469405361');
-    fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=112119469405361&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code -->
+    <!-- Link to external CSS files -->
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <!-- New Top Section -->
-    <section id="new-hero">
-        <div class="hero-content">
-            <h1>Tycoon's Intel Brief</h1>
-            <p>Actionable insights from our specifically trained AI who share their wisdom and strategies for success. Access exclusive intel and learn from the experts changing the world. You can also interact directly with each content to ask questions and dig deeper.</p>
+    <div class="container">
+        <div class="mobile-header">
+            <img src="img/dog-pill.png" alt="Business Dog Logo" class="dog-logo">
         </div>
-        <div class="headshot-grid">
-            <!-- Tile 1 -->
-             <h1>Our Experts</h1>
-            <div class="headshot-tile">
-                <div class="tile-header">
-                    <picture>
-                        <source srcset="img/headshots/avif/gen_mitchell.avif" type="image/avif">
-                        <source srcset="img/headshots/webp/gen_mitchell.webp" type="image/webp">
-                        <img src="img/headshots/optimized_png/gen_mitchell_optimized.png" alt="Gen. Sarah Mitchell" width="300" height="300" loading="lazy">
-                    </picture>
-                    <div class="tile-content">
-                        <h3>Gen. Sarah Mitchell</h3>
-                        <p>Military Intelligence</p>
-                    </div>
-                    <span class="indicator">▼</span>
+        
+        <div class="left-section">
+            <img src="img/dog-pill.png" alt="Business Dog Logo" class="dog-logo desktop-only">
+            <h2>Our AI Experts</h2>
+            
+            <div class="expert-card">
+                <picture class="expert-image">
+                    <source srcset="img/headshots/avif/gen_mitchell.avif" type="image/avif">
+                    <source srcset="img/headshots/webp/gen_mitchell.webp" type="image/webp">
+                    <img src="img/headshots/optimized_png/gen_mitchell_optimized.png" alt="Gen. Sarah Mitchell" width="60" height="60">
+                </picture>
+                <div class="expert-info">
+                    <h3>Gen. Sarah Mitchell</h3>
+                    <p>Military Intelligence</p>
                 </div>
-                <div class="tile-details">
+                <span class="arrow">▶</span>
+                <div class="expert-details">
                     <p>Retired 4-star general with 30 years in cyber and battlefield intelligence. Known for streamlining covert ops during major global conflicts. Now advises major governments and private defense firms. She believes data without action is useless.</p>
                 </div>
             </div>
-            <!-- Tile 2 -->
-            <div class="headshot-tile">
-                <div class="tile-header">
-                    <picture>
-                        <source srcset="img/headshots/avif/dr_chen.avif" type="image/avif">
-                        <source srcset="img/headshots/webp/dr_chen.webp" type="image/webp">
-                        <img src="img/headshots/optimized_png/dr_chen_optimized.png" alt="Dr. Michael Chen" width="300" height="300" loading="lazy">
-                    </picture>
-                    <div class="tile-content">
-                        <h3>Dr. Michael Chen</h3>
-                        <p>Geopolitical Analyst</p>
-                    </div>
-                    <span class="indicator">▼</span>
+            
+            <div class="expert-card">
+                <picture class="expert-image">
+                    <source srcset="img/headshots/avif/dr_chen.avif" type="image/avif">
+                    <source srcset="img/headshots/webp/dr_chen.webp" type="image/webp">
+                    <img src="img/headshots/optimized_png/dr_chen_optimized.png" alt="Dr. Michael Chen" width="60" height="60">
+                </picture>
+                <div class="expert-info">
+                    <h3>Dr. Michael Chen</h3>
+                    <p>Geopolitical Analyst</p>
                 </div>
-                <div class="tile-details">
-                    <p>Former Oxford professor turned freelance geopolitical strategist. Published multiple seminal papers predicting regime changes and trade realignments. Advises think tanks, NGOs, and multinational companies. Motto: “Power shifts aren't random — they're visible to those who look.”</p>
+                <span class="arrow">▶</span>
+                <div class="expert-details">
+                    <p>Former Oxford professor turned freelance geopolitical strategist. Published multiple seminal papers predicting regime changes and trade realignments. Advises think tanks, NGOs, and multinational companies. Motto: "Power shifts aren't random — they're visible to those who look."</p>
                 </div>
             </div>
-            <!-- Tile 3 -->
-            <div class="headshot-tile">
-                <div class="tile-header">
-                    <picture>
-                        <source srcset="img/headshots/avif/sophia.avif" type="image/avif">
-                        <source srcset="img/headshots/webp/sophia.webp" type="image/webp">
-                        <img src="img/headshots/optimized_png/sophia_optimized.png" alt="Sophia Rodriguez" width="300" height="300" loading="lazy">
-                    </picture>
-                    <div class="tile-content">
-                        <h3>Sophia Rodriguez</h3>
-                        <p>Investigative Journalist</p>
-                    </div>
-                    <span class="indicator">▼</span>
+            
+            <div class="expert-card">
+                <picture class="expert-image">
+                    <source srcset="img/headshots/avif/sophia.avif" type="image/avif">
+                    <source srcset="img/headshots/webp/sophia.webp" type="image/webp">
+                    <img src="img/headshots/optimized_png/sophia_optimized.png" alt="Sophia Rodriguez" width="60" height="60">
+                </picture>
+                <div class="expert-info">
+                    <h3>Sophia Rodriguez</h3>
+                    <p>Investigative Journalist</p>
                 </div>
-                <div class="tile-details">
-                    <p>Pulitzer Prize-winning journalist who exposed several high-profile corruption scandals. Born and raised in Miami to Cuban immigrant parents. Built her career by chasing stories across war zones, corporate boardrooms, and whistleblower networks. Favorite saying: “The truth doesn't knock. You have to kick the door down.”</p>
+                <span class="arrow">▶</span>
+                <div class="expert-details">
+                    <p>Pulitzer Prize-winning journalist who exposed several high-profile corruption scandals. Born and raised in Miami to Cuban immigrant parents. Built her career by chasing stories across war zones, corporate boardrooms, and whistleblower networks. Favorite saying: "The truth doesn't knock. You have to kick the door down."</p>
                 </div>
             </div>
         </div>
-    </section>
-
-    <section id="features">
-        <h2>What You Get Every Morning:</h2>
-        <ul>
-            <li><strong>Leader Insights:</strong> Understand the perspectives and plans of key global figures.</li>
-            <li><strong>State Politics:</strong> Track crucial internal political developments.</li>
-            <li><strong>Geopolitical Movements:</strong> Stay informed on international relations and shifts in power.</li>
-            <li><strong>Translated Regional News:</strong> Access vital information from local sources, translated for you.</li>
-            <li><strong>Forward-Looking Insights:</strong> Gain strategic foresight on what's likely to happen next.</li>
-        </ul>
-    </section>
-
-    <section id="signup">
-        <div id="signup-form">
-            <h2>Be the First to Know</h2>
-            <p>Sign up for exclusive early access and updates.</p>
-            <form id="fb-lead-form" method="POST" action="https://script.google.com/macros/s/AKfycbza5iFxMeMwCrfJctbaP1rXSB2J-anjbnQiJ5GGvX__KjJpNaGeKMP_WINkOgCMAShp/exec">
-                <input type="email" name="Email" placeholder="Enter your email" required>
-                <button type="submit" class="cta-button">Request Access</button>
-            </form>
-        </div>
-        <div id="confirmation-message" class="hidden">
-            <h2>Access Request Confirmed</h2>
-            <p class="confirmation-text"><p class="classified"></p>Your intelligence briefing access has been approved.</p>
-            <div class="confirmation-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="64" height="64">
-                    <circle cx="12" cy="12" r="11" fill="none" stroke="#2ecc71" stroke-width="2"/>
-                    <path d="M7 13l3 3 7-7" fill="none" stroke="#2ecc71" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
+        
+        <div class="right-section">
+            <h1>Behind the Matrix</h1>
+            
+            <p>Actionable insights from our specifically trained AI who share their wisdom and strategies for success. Access exclusive intel and learn from our AI experts. You can also interact directly with each expert to ask questions and dig deeper.</p>
+            
+            <h2>What You Get Every Morning:</h2>
+            
+            <ul class="feature-list">
+                <li><strong>Leader Insights:</strong> Understand the perspectives and plans key global figures.</li>
+                <li><strong>State Politics:</strong> Track crucial internal political developments.</li>
+                <li><strong>Geopolitical Movements:</strong> Stay informed on international relations and shifts in power.</li>
+                <li><strong>Translated Regional News:</strong> Access vital information from local sources, translated for you.</li>
+                <li><strong>Forward-Looking Insights:</strong> Gain strategic foresight on what's likely to happen.</li>
+            </ul>
+            
+            <div class="email-form">
+                <form id="fb-lead-form" method="POST" action="https://script.google.com/macros/s/AKfycbza5iFxMeMwCrfJctbaP1rXSB2J-anjbnQiJ5GGvX__KjJpNaGeKMP_WINkOgCMAShp/exec">
+                    <input type="email" name="Email" placeholder="Enter your email" required>
+                    <button type="submit" class="request-button">Request Access</button>
+                </form>
             </div>
-            <p class="small-text">You will receive your first intelligence brief soon.</p>
         </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 <a href="https://aionthebeach.com" target="_blank">AI on the Beach LLC</a>. All rights reserved.</p>
-    </footer>
-    <script src="script.min.js?v=20250428"></script>
+    </div>
+    
+    <!-- Link to external JavaScript files -->
+    <script src="script.min.js"></script>
 </body>
 </html>
