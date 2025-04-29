@@ -91,45 +91,59 @@ document.addEventListener('DOMContentLoaded', () => {
                     // Create and add a scanning effect to the entire form
                     signupFormContainer.classList.add('scanning');
                     
-                    // After a short delay, transition to the confirmation message
-                    setTimeout(() => {
-                        // Hide the form with animation
-                        signupFormContainer.classList.add('fade-out');
-                        
-                        // After form fades out, show the confirmation message
+                    // Submit the form data via fetch API
+                    fetch(signupForm.action, {
+                        method: 'POST',
+                        body: new FormData(signupForm),
+                        mode: 'no-cors'
+                    })
+                    .then(() => {
+                        console.log('Form submitted successfully');
+                    })
+                    .catch(error => {
+                        console.error('Error submitting form:', error);
+                    })
+                    .finally(() => {
+                        // After a short delay, transition to the confirmation message
                         setTimeout(() => {
-                            // Remove hidden class and add show class for animation
-                            confirmationMessage.classList.remove('hidden');
+                            // Hide the form with animation
+                            signupFormContainer.classList.add('fade-out');
                             
-                            // Force a reflow before adding the show class
-                            void confirmationMessage.offsetWidth;
-                            
-                            confirmationMessage.classList.add('show');
-                            
-                            // Add typewriter effect to confirmation text
-                            const confirmationText = document.querySelector('.confirmation-text');
-                            if (confirmationText) {
-                                const originalConfirmText = confirmationText.textContent;
-                                confirmationText.textContent = '';
-                                let j = 0;
+                            // After form fades out, show the confirmation message
+                            setTimeout(() => {
+                                // Remove hidden class and add show class for animation
+                                confirmationMessage.classList.remove('hidden');
                                 
-                                const typeConfirmation = () => {
-                                    if (j < originalConfirmText.length) {
-                                        confirmationText.textContent += originalConfirmText.charAt(j);
-                                        j++;
-                                        setTimeout(typeConfirmation, 40);
-                                    }
-                                };
+                                // Force a reflow before adding the show class
+                                void confirmationMessage.offsetWidth;
                                 
-                                setTimeout(typeConfirmation, 300);
-                            }
-                            
+                                confirmationMessage.classList.add('show');
+                                
+                                // Add typewriter effect to confirmation text
+                                const confirmationText = document.querySelector('.confirmation-text');
+                                if (confirmationText) {
+                                    const originalConfirmText = confirmationText.textContent;
+                                    confirmationText.textContent = '';
+                                    let j = 0;
+                                    
+                                    const typeConfirmation = () => {
+                                        if (j < originalConfirmText.length) {
+                                            confirmationText.textContent += originalConfirmText.charAt(j);
+                                            j++;
+                                            setTimeout(typeConfirmation, 40);
+                                        }
+                                    };
+                                    
+                                    setTimeout(typeConfirmation, 300);
+                                }
+                                
                             // Play a subtle "classified" stamp animation
                             // This is handled by CSS animations
                             
-                        }, 800); // Wait for form fade-out animation to complete
-                        
-                    }, 1500); // Wait for processing animation
+                            }, 800); // Wait for form fade-out animation to complete
+                            
+                        }, 1500); // Wait for processing animation
+                    });
                 } else {
                     // Fallback if button not found
                     signupFormContainer.classList.add('fade-out');
